@@ -57,29 +57,31 @@ input[type='checkbox'] {
 }
 </style>
 
-<div class="wrap-collabsible"> 
-  <input id="collapsible" class="toggle" type="checkbox"> 
-  <label for="collapsible" class="lbl-toggle">Versions</label>
-  <div class="collapsible-content">
-    <div class="content-inner">
-      <ul>
-        {%- for item in versions %}
-        <li><a href="https://flower.dev/docs/framework/{{ item.name }}/{{ current_language }}/{{ pagename }}.html" style="text-decoration:none">{{ item.name }}</a></li>
-        {%- endfor %}
-      </ul>
+<div style="display: grid; grid-template-columns: 1fr 1fr;"> 
+  <div class="wrap-collabsible"> 
+    <input id="collapsible" class="toggle" type="checkbox"> 
+    <label for="collapsible" class="lbl-toggle">Versions</label>
+    <div class="collapsible-content">
+      <div class="content-inner">
+        <ul>
+          {%- for item in versions %}
+          <li><a href="https://flower.dev/docs/framework/{{ item.name }}/{{ current_language }}/{{ pagename }}.html" style="text-decoration:none">{{ item.name }}</a></li>
+          {%- endfor %}
+        </ul>
+      </div>
     </div>
   </div>
-</div>
-<div class="wrap-collabsible"> 
-  <input id="collapsible2" class="toggle" type="checkbox"> 
-  <label for="collapsible2" class="lbl-toggle">Language</label>
-  <div class="collapsible-content">
-    <div class="content-inner">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/0.8.2/css/flag-icon.min.css">
+  <div class="wrap-collabsible"> 
+    <input id="collapsible2" class="toggle" type="checkbox"> 
+    <label for="collapsible2" class="lbl-toggle">Language</label>
+    <div class="collapsible-content">
+      <div class="content-inner">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/0.8.2/css/flag-icon.min.css">
 
-      <div style="text-align: center; padding-bottom: 1rem;">
-        <a href="https://flower.dev/docs/framework/{{ current_version.url }}/en/{{ pagename }}.html" style="text-decoration:none; padding-right: 2rem; font-size: 150%;">&#127468;&#127463;</a>
-        <a href="https://flower.dev/docs/framework/{{ current_version.url }}/fr/{{ pagename }}.html" style="text-decoration:none; font-size: 150%;">&#127467;&#127479;</a>
+        <div style="text-align: center; padding-bottom: 1rem;">
+          <a href="https://flower.dev/docs/framework/{{ current_version.url }}/en/{{ pagename }}.html" style="text-decoration:none; padding-right: 2rem; font-size: 150%;">&#127468;&#127463;</a>
+          <a href="https://flower.dev/docs/framework/{{ current_version.url }}/fr/{{ pagename }}.html" style="text-decoration:none; font-size: 150%;">&#127467;&#127479;</a>
+        </div>
       </div>
     </div>
   </div>
