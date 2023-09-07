@@ -244,7 +244,7 @@ html_sidebars = {
         "sidebar/navigation.html",
         "sidebar/scroll-end.html",
         "sidebar/versioning.html",
-        "sidebar/lang.html",
+        # "sidebar/lang.html",
     ]
 }
 # -- Options for nbsphinx -------------------------------------------------
