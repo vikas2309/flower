@@ -1,5 +1,5 @@
 {% if versions %}
-<div style="display: grid; grid-template-columns: 1fr 1fr;"> 
+<div style="display: grid; grid-template-columns: 1fr 1fr; padding-bottom: 2rem;"> 
   <div>
     <select onChange="window.location.href=this.value">
       {%- for item in versions %}
@@ -10,7 +10,7 @@
   <div> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/0.8.2/css/flag-icon.min.css">
     <select onChange="window.location.href=this.value">
-      <option value="https://flower.dev/docs/framework/{{ current_version.url }}/en/{{ pagename }}.html" style="text-decoration:none; padding-right: 2rem;" {% if current_language == 'en' %}selected{% endif %}>EN <span style="font-size: 150%;">&#127468;&#127463;</span></option>
+      <option value="https://flower.dev/docs/framework/{{ current_version.url }}/en/{{ pagename }}.html" style="text-decoration:none;" {% if current_language == 'en' %}selected{% endif %}>EN <span style="font-size: 150%;">&#127468;&#127463;</span></option>
       <option value="https://flower.dev/docs/framework/{{ current_version.url }}/fr/{{ pagename }}.html" style="text-decoration:none;" {% if current_language == 'fr' %}selected{% endif %}>FR <span style="font-size: 150%;">&#127467;&#127479;</span></option>
     </select>
   </div>
