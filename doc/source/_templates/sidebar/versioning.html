@@ -57,6 +57,37 @@ input[type='checkbox'] {
 }
 </style>
 
+<!-- <div style="display: grid; grid-template-columns: 1fr 1fr;">  -->
+<!--   <div class="wrap-collabsible">  -->
+<!--     <input id="collapsible" class="toggle" type="checkbox">  -->
+<!--     <label for="collapsible" class="lbl-toggle">Versions</label> -->
+<!--     <div class="collapsible-content"> -->
+<!--       <div class="content-inner"> -->
+<!--         <ul> -->
+<!--           {%- for item in versions %} -->
+<!--           <li><a href="https://flower.dev/docs/framework/{{ item.name }}/{{ current_language }}/{{ pagename }}.html" style="text-decoration:none">{{ item.name }}</a></li> -->
+<!--           {%- endfor %} -->
+<!--         </ul> -->
+<!--       </div> -->
+<!--     </div> -->
+<!--   </div> -->
+<!--   <div class="wrap-collabsible">  -->
+<!--     <input id="collapsible2" class="toggle" type="checkbox">  -->
+<!--     <label for="collapsible2" class="lbl-toggle">Lang</label> -->
+<!--     <div class="collapsible-content"> -->
+<!--       <div class="content-inner"> -->
+<!--         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/0.8.2/css/flag-icon.min.css"> -->
+
+<!--         <!-- <div style="text-align: center; padding-bottom: 1rem;"> --> -->
+<!--         <ul> -->
+<!--           <li><a href="https://flower.dev/docs/framework/{{ current_version.url }}/en/{{ pagename }}.html" style="text-decoration:none; padding-right: 2rem;">EN <span style="font-size: 150%;">&#127468;&#127463;</span></a></li> -->
+<!--           <li><a href="https://flower.dev/docs/framework/{{ current_version.url }}/fr/{{ pagename }}.html" style="text-decoration:none;">FR <span style="font-size: 150%;">&#127467;&#127479;</span></a></li> -->
+<!--         </ul> -->
+<!--         <!-- </div> --> -->
+<!--       </div> -->
+<!--     </div> -->
+<!--   </div> -->
+<!-- </div> -->
 <div style="display: grid; grid-template-columns: 1fr 1fr;"> 
   <div class="wrap-collabsible"> 
     <input id="collapsible" class="toggle" type="checkbox"> 
@@ -71,21 +102,14 @@ input[type='checkbox'] {
       </div>
     </div>
   </div>
-  <div class="wrap-collabsible"> 
-    <input id="collapsible2" class="toggle" type="checkbox"> 
-    <label for="collapsible2" class="lbl-toggle">Lang</label>
-    <div class="collapsible-content">
-      <div class="content-inner">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/0.8.2/css/flag-icon.min.css">
-
-        <!-- <div style="text-align: center; padding-bottom: 1rem;"> -->
-        <ul>
-          <li><a href="https://flower.dev/docs/framework/{{ current_version.url }}/en/{{ pagename }}.html" style="text-decoration:none; padding-right: 2rem;">EN <span style="font-size: 150%;">&#127468;&#127463;</span></a></li>
-          <li><a href="https://flower.dev/docs/framework/{{ current_version.url }}/fr/{{ pagename }}.html" style="text-decoration:none;">FR <span style="font-size: 150%;">&#127467;&#127479;</span></a></li>
-        </ul>
-        <!-- </div> -->
-      </div>
-    </div>
+  <div> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/0.8.2/css/flag-icon.min.css">
+    <input id="language" class="toggle" type="checkbox"> 
+    <label for="language" class="lbl-toggle">Lang</label>
+      <select onChange="window.location.href=this.value">
+        <option value="https://flower.dev/docs/framework/{{ current_version.url }}/en/{{ pagename }}.html" style="text-decoration:none; padding-right: 2rem;">EN <span style="font-size: 150%;">&#127468;&#127463;</span></option>
+        <option value="https://flower.dev/docs/framework/{{ current_version.url }}/fr/{{ pagename }}.html" style="text-decoration:none;">FR <span style="font-size: 150%;">&#127467;&#127479;</span></option>
+      </select>
   </div>
 </div>
 {% endif %}
