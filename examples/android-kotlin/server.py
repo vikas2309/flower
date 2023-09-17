@@ -15,10 +15,16 @@ def fit_config(server_round: int):
     Keep batch size fixed at 32, perform two rounds of training with one local epoch,
     increase to two local epochs afterwards.
     """
-    config = {
-        "batch_size": 32,
-        "local_epochs": 5,
-    }
+    if server_round < 2:
+        config = {
+            "batch_size": 32,
+            "local_epochs": 1,
+        }
+    else:
+        config = {
+            "batch_size": 32,
+            "local_epochs": 2,
+        }
     return config
 
 
